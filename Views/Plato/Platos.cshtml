@@ -1,0 +1,27 @@
+@{
+    ViewData["Title"] = "Platos";
+}
+@model List<Plato>
+<div class="contenido">
+    <div class="text-center">
+        <h1 class="text-decoration-underline">¡Mmm! ¡Revisa nuestros sabrosos platos!</h1>
+    </div>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Chef</th>
+                <th>Sabor</th>
+                <th>Calorias</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(Plato plato in @Model){
+                <td>@plato.Nombre</td>
+                <td>@plato.Creador.Nombre @plato.Creador.Apellido</td>                
+                <td>@plato.Sabor</td>
+                <td>@plato.Calorias</td>
+            }
+        </tbody>
+    </table>
+</div>
