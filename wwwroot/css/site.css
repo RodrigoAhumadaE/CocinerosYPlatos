@@ -19,6 +19,9 @@
   margin-bottom: 20px;
 }
 
+.lista{
+  width: 100%;
+}
 form{
   width: 80%;
   display: flex;

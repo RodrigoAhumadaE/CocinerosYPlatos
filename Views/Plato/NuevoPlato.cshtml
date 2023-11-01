@@ -23,7 +23,7 @@
             <div class="item-plato">
                 <label asp-for="ChefId">Nombre del Chef </label>
                 <select asp-for="ChefId">
-                    <option value="0" selected>Elija un Chef</option>
+                    <option value="a" disabled selected>Elija un Chef</option>
                     @foreach(string lc in @ViewBag.chefs){
                         <option value="@indice">@indice - @lc</option>
                         indice++;
@@ -36,6 +36,7 @@
             <div class="item-plato">
                 <label asp-for="Sabor">Sabor</label>
                 <select asp-for="Sabor">
+                    <option value="a" disabled selected>Elija un Chef</option>
                     @foreach(int v in valor){
                         <option value="@v">@v</option>
                     }
