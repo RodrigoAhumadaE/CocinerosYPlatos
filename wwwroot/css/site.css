@@ -1,18 +1,69 @@
-html {
-  font-size: 14px;
+*{
+  margin: 0;
+  padding: 0;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+.formulario{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+.titulo{
+  width: 80%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  border-bottom: black solid 2px;
+  margin-bottom: 20px;
 }
 
-body {
-  margin-bottom: 60px;
+form{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.item{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.item label{
+  flex: 1;
+}
+
+.item input, .item span{
+  flex: 2;
+}
+
+/* nuevo plato */
+
+.form{
+  display: flex;
+  flex-direction: row;
+}
+
+.form .izq{
+  flex: 2;
+}
+
+.form .cen, .form .der{
+  flex: 1;
+}
+
+.item-plato{
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+}
+
+.boton{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin: 10px 20px 0 0;  
 }

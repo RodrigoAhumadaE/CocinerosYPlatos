@@ -17,10 +17,12 @@
         </thead>
         <tbody>
             @foreach(Plato plato in @Model){
-                <td>@plato.Nombre</td>
-                <td>@plato.Creador.Nombre @plato.Creador.Apellido</td>                
-                <td>@plato.Sabor</td>
-                <td>@plato.Calorias</td>
+                <tr>
+                    <td>@plato.Nombre</td>
+                    <td>@plato.Creador.Nombre @plato.Creador.Apellido</td>                
+                    <td>@plato.Sabor</td>
+                    <td>@plato.Calorias</td>
+                </tr>                
             }
         </tbody>
     </table>

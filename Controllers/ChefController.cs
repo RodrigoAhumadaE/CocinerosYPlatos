@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using CocinerosYPlatos.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace CocinerosYPlatos.Controllers;
 
@@ -15,7 +16,7 @@ public class ChefController : Controller{
 
     [HttpGet("")]
     public IActionResult Index(){
-        List<Chef> ListaChef = _context.Chefs.ToList();
+        List<Chef> ListaChef = _context.Chefs.Include(p => p.ListaPlatos).ToList();
         return View("Index", ListaChef);
     }
 

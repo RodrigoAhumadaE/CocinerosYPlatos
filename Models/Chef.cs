@@ -7,13 +7,13 @@ public class Chef{
     [Key]
     public int ChefId {get;set;}
 
-    [Required]
+    [Required(ErrorMessage = "Debe ingresar un nombre.")]
     public string Nombre {get;set;}
 
-    [Required]
+    [Required(ErrorMessage = "Debe ingresar un apellido.")]
     public string Apellido {get;set;}
 
-    [Required]
+    [Required(ErrorMessage = "Debe ingresar una fecha de nacimiento.")]
     [CheckFecha]
     public DateTime FechaNacimiento {get;set;}
 

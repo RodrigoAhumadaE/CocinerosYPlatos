@@ -22,10 +22,19 @@ public class PlatoController : Controller{
 
     [HttpGet("nuevo/plato")]
     public IActionResult NuevoPlato(){
-        
-        // List<Plato> listaPlatos = _context.Platos.Include(p => p.Creador).ToList();
         List<string> listaChefs = _context.Chefs.Select(c => c.Nombre + " " + c.Apellido).ToList();
         ViewBag.chefs = listaChefs;        
+        return View("NuevoPlato");
+    }
+
+    // POST
+    [HttpPost("agregar/plato")]
+    public IActionResult AgregarPlato(Plato plato){
+        if(ModelState.IsValid){
+            _context.Platos.Add(plato);
+            _context.SaveChanges();
+            return RedirectToAction("Platos");
+        }
         return View("NuevoPlato");
     }
 
